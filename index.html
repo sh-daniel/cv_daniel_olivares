@@ -2,157 +2,203 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Daniel Olivares Contreras</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>CV Daniel Olivares - Perfil Profesional</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
-body { font-family: 'Inter', sans-serif; background:#f8fafc; margin:0; padding:0; line-height:1.5; }
-.container { max-width:900px; margin:auto; padding:20px; background:#fff; }
-h1, h2 { margin:0; }
-h1 { text-align:center; font-size:1.8rem; color:#1d4ed8; }
-.subtitle { text-align:center; font-size:1rem; color:#1e3a8a; margin-bottom:5px; }
-.contact { text-align:center; font-size:0.85rem; margin-bottom:20px; }
-.contact a { color:#1d4ed8; text-decoration:underline; margin:0 5px; }
-h2 { color:#1d4ed8; border-left:4px solid #1d4ed8; padding-left:10px; margin-top:20px; margin-bottom:10px; }
-.card { background:#e5e7eb; padding:15px 20px; border-radius:8px; margin-bottom:10px; }
-.job { margin-bottom:20px; }
-.job-title { font-weight:600; font-size:1rem; color:#1e3a8a; }
-.meta { font-size:0.85rem; color:#6b7280; margin-bottom:5px; }
-ul { padding-left:20px; margin:0; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:8px; }
-.skill-box { background:#e5e7eb; padding:8px; border-radius:6px; font-size:0.85rem; }
-#downloadBtn { display:block; margin:20px auto; padding:10px 20px; font-size:0.95rem; font-weight:600; color:#fff; background-color:#1d4ed8; border:none; border-radius:6px; cursor:pointer; }
-#downloadBtn:hover { background-color:#2563eb; }
-footer { text-align:center; margin-top:20px; font-size:0.75rem; color:#6b7280; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 8px;
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+header h2 {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+header p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+}
+header a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+section {
+    background: #ffffff;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    page-break-inside: avoid;
+}
+section h2 {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+    color: #0066cc;
+}
+ul {
+    margin: 5px 0 0 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    page-break-inside: auto;
+}
+table th, table td {
+    text-align: left;
+    padding: 6px;
+    font-size: 12px;
+    vertical-align: top;
+}
+table th {
+    background-color: #e6f0ff;
+    color: #0066cc;
+}
+table tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+.btn {
+    padding: 10px 15px;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 <body>
 
-<div class="container" id="cvPDFContent">
+<button class="btn" id="downloadPdf">Descargar PDF</button>
 
-<!-- Encabezado dentro del contenedor -->
+<div id="cvContent">
+
+<header>
 <h1>Daniel Olivares Contreras</h1>
-<div class="subtitle">Senior Performance Engineer | QA | Banca | Cloud</div>
-<div class="contact">
-<a href="https://wa.me/56942788737">+56 9 427 88 737</a> | 
-<a href="mailto:daniel.ignacio@gmail.com">Daniel.ignacio@gmail.com</a> | 
-<a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/" target="_blank">LinkedIn: Daniel_Olivares_C</a>
-</div>
+<h2>Senior Performance Engineer | QA | Banca | Cloud</h2>
+<p>
+<a href="https://wa.me/56942788737">+56 9 427 88 737</a> |
+<a href="mailto:daniel.ignacio@gmail.com">daniel.ignacio@gmail.com</a> |
+<a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/">LinkedIn</a> |
+<a href="https://sh-daniel.github.io/cv_daniel_olivares/index.html">cv_Cloud</a>
+</p>
+</header>
 
-<!-- Botón descarga -->
-<button id="downloadBtn">📄 Descargar PDF</button>
-
-<div class="section">
+<section>
 <h2>Perfil Profesional</h2>
-<div class="card">Performance Engineer con más de 12 años de experiencia en sistemas críticos del sector financiero. Especializado en pruebas de carga y stress, análisis de performance en aplicaciones y bases de datos, optimización de queries y gestión de ambientes complejos multi-entorno. Experiencia en plataformas de alta disponibilidad, diagnóstico de cuellos de botella, soporte a producción y colaboración con equipos Dev, QA y DevOps.</div>
-</div>
+<p>Performance Engineer con más de 12 años de experiencia en sistemas críticos del sector financiero. Especializado en pruebas de carga y stress, análisis de performance en aplicaciones y bases de datos, optimización de queries y gestión de ambientes complejos multi‑entorno. Experiencia en plataformas de alta disponibilidad, diagnóstico de cuellos de botella, soporte a producción y colaboración con equipos Dev, QA y DevOps.</p>
+</section>
 
-<div class="section">
+<section>
 <h2>Core Expertise</h2>
-<div class="grid">
-<div class="skill-box">Performance Testing (JMeter)</div>
-<div class="skill-box">Load & Stress Testing</div>
-<div class="skill-box">Performance Analysis (App + DB)</div>
-<div class="skill-box">SQL / Oracle Performance Tuning</div>
-<div class="skill-box">Environment Management (DEV / QA / PROD)</div>
-<div class="skill-box">Middleware Performance</div>
-<div class="skill-box">Incident Analysis (Producción)</div>
-<div class="skill-box">CI/CD Integration</div>
-<div class="skill-box">Cloud Performance Fundamentals</div>
-</div>
-</div>
+<ul>
+<li>Performance testing (JMeter)</li>
+<li>Load & Stress testing</li>
+<li>Performance analysis (app + DB)</li>
+<li>SQL / Oracle performance tuning</li>
+<li>Environment management (DEV / QA / PROD)</li>
+<li>Middleware performance</li>
+<li>Incident analysis (producción)</li>
+<li>CI/CD integration</li>
+<li>Cloud performance fundamentals</li>
+</ul>
+</section>
 
-<div class="section">
+<section>
 <h2>Experiencia Profesional</h2>
+<table border="1">
+<tr>
+<th>Empresa</th><th>Cliente/Proyecto</th><th>Período</th><th>Rol</th><th>Descripción / Herramientas</th>
+</tr>
+<tr>
+<td>TCS</td>
+<td>Transbank</td>
+<td>Feb 2022 – Feb 2026</td>
+<td>Analyst.BFSIUS SE&Latam</td>
+<td>
+Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identificación de errores, análisis de resultados y soporte a releases.<br>
+<b>Herramientas:</b> Sql Developer, Datastage, Cawa, Postman, Kafka Tools, Jira, Confluence, Unix/Linux, Winscp, AWS, Snowflake, Rancher, Postgres, Dbeaver
+</td>
+</tr>
+<tr>
+<td>Connectis Global Services Chile S.A</td>
+<td>Banco Consorcio</td>
+<td>Ene 2022 – Feb 2022</td>
+<td>Analista QA</td>
+<td>Diseño, análisis y ejecución de casos de prueba complejos, flujos fríos, regresión y casos de borde.<br>
+<b>Herramientas:</b> SQL Developer, SQL, Jira, Mantis, Testlink, Confluence, Oracle, SQL Server
+</td>
+</tr>
+<tr>
+<td>Inmetrics</td>
+<td>Banchile Inversiones / Banco Itaú</td>
+<td>Jan 2013 – May 2021</td>
+<td>Senior Performance Analyst</td>
+<td>Pruebas de carga y stress con JMeter, análisis de performance en aplicaciones backend y Oracle, gestión de ambientes QA, laboratorio y producción, soporte a incidentes críticos y gestión de middleware.<br>
+<b>Herramientas:</b> JMeter, Weblogic, Oracle Enterprise Manager 10g, middlewares, ASM, Postman, SoapUI
+</td>
+</tr>
+<tr>
+<td>HP Chile</td>
+<td>Emel, Binaria, Transbank</td>
+<td>Abr 2009 – Ene 2013</td>
+<td><strong>Production Support / Systems Operator</strong></td>
+<td>Monitoreo de procesos batch, gestión de workload y respaldos, análisis de logs e incidentes.<br>
+<b>Herramientas:</b> Linux, HP-UX, Unix, Windows, Workload, Prognosys, SQL Plus, Query Builder, Data Protector
+</td>
+</tr>
+</table>
+</section>
 
-<div class="job">
-<div class="job-title">Performance QA / QA Analyst</div>
-<div class="meta">Empresa: TCS | Cliente: Transbank</div>
-<div class="meta">Feb 2022 – Feb 2026</div>
-<ul>
-<li>Diseño y ejecución de pruebas funcionales y validaciones de performance.</li>
-<li>Definición de estrategia de pruebas y generación de data de prueba.</li>
-<li>Identificación y seguimiento de defectos.</li>
-<li>Coordinación con equipos de desarrollo y negocio.</li>
-<li>Participación en releases productivos y ciclos Agile.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title">QA Analyst</div>
-<div class="meta">Empresa: Connectis Global Services Chile S.A | Cliente: Banco Consorcio</div>
-<div class="meta">May 2021 – Feb 2022</div>
-<ul>
-<li>QA en proyectos de Banca Empresa.</li>
-<li>Diseño de casos de prueba complejos y casos de borde.</li>
-<li>Ejecución de regresión y validación de correcciones.</li>
-<li>Soporte a releases.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title">Senior Performance Analyst</div>
-<div class="meta">Empresa: Inmetrics Chile | Clientes: Banchile Inversiones, Banco Itaú</div>
-<div class="meta">Jan 2013 – May 2021</div>
-<ul>
-<li>Pruebas de carga, stress y capacidad con JMeter.</li>
-<li>Análisis de performance en aplicaciones backend y Oracle.</li>
-<li>Identificación de cuellos de botella.</li>
-<li>Recomendaciones de optimización.</li>
-<li>Gestión de ambientes QA, laboratorio y producción.</li>
-<li>Soporte a incidentes críticos.</li>
-<li>Clonación y administración de bases de datos.</li>
-<li>Gestión de middleware (WebLogic, Oracle Enterprise Manager).</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title">Production Support / Systems Operator</div>
-<div class="meta">Empresa: HP Chile | Clientes: Emel, Binaria, Transbank</div>
-<div class="meta">Apr 2009 – Jan 2013</div>
-<ul>
-<li>Monitoreo de procesos batch en entornos críticos.</li>
-<li>Gestión de workload y respaldos.</li>
-<li>Análisis de logs e incidentes.</li>
-<li>Generación de métricas operacionales.</li>
-<li>Trabajo en Linux, Unix, Windows y HP-UX.</li>
-</ul>
-</div>
-</div>
-
-<div class="section">
+<section>
 <h2>Stack de Performance</h2>
-<div class="grid">
-<div class="skill-box">JMeter | Load Testing | Stress Testing</div>
-<div class="skill-box">Oracle | SQL | PL/SQL | Postgres</div>
-<div class="skill-box">REST / SOAP | Kafka | MQ | JMS</div>
-<div class="skill-box">Jenkins | Git | Bitbucket | Jira | Xray | Postman | Control-M</div>
-<div class="skill-box">Linux | Unix | Middleware | WebLogic</div>
-<div class="skill-box">ETL | Datastage | ODI (Oracle Data Integrator)| Snowflake</div>
-<div class="skill-box">AWS | Google Cloud</div>
-</div>
-</div>
+<ul>
+<li>JMeter, Load testing, Stress testing</li>
+<li>Oracle, SQL, PL/SQL, Postgres</li>
+<li>REST / SOAP, Kafka, MQ, JMS</li>
+<li>Jenkins, Git, Bitbucket, Jira, Xray, Postman, Control‑M</li>
+<li>Linux, Unix, Middleware, Weblogic</li>
+<li>ETL, Datastage, ODI, Snowflake</li>
+<li>AWS, Google Cloud</li>
+</ul>
+</section>
 
-<div class="section">
+<section>
 <h2>Educación</h2>
-<div class="card">Ingeniería en Ejecución en Informática — AIEP (2006)</div>
-</div>
-
-<footer>© 2026 Daniel Olivares Contreras | Senior Performance Engineer</footer>
+<p>Ingeniería en Ejecución en Informática — AIEP (2006)</p>
+</section>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-document.getElementById("downloadBtn").addEventListener("click", () => {
-    const element = document.getElementById("cvPDFContent");
+document.getElementById("downloadPdf").addEventListener("click", () => {
+    const element = document.getElementById("cvContent");
     const opt = {
-      margin:       [10, 10, 10, 10],
-      filename:     'CV_Perfil_Profesional_Daniel_Olivares.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, scrollY: -window.scrollY },
-      jsPDF:        { unit: 'pt', format: 'a4', orientation: 'portrait' },
-      pagebreak:    { mode: ['css', 'legacy'] }
+        margin: 10,
+        filename: 'CV_Perfil_Profesional_Daniel_Olivares.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 1.8, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
     html2pdf().set(opt).from(element).save();
 });
