@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>CV Daniel Olivares - Perfil Profesional</title>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+
 <style>
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -12,31 +16,72 @@ body {
     background: #f4f4f4;
     color: #333;
 }
+
 header {
     background-color: #0066cc;
     color: white;
-    text-align: center;
     padding: 25px 20px;
     border-radius: 8px;
 }
+
+/* HEADER PROFESIONAL */
+
+.header-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.header-spacer{
+    width:120px;
+}
+
+.header-center{
+    flex:1;
+    text-align:center;
+}
+
+.contact-links{
+    margin-top:8px;
+}
+
+.qr-container{
+    width:120px;
+    text-align:right;
+}
+
+.qr-container canvas{
+    background:white;
+    padding:6px;
+    border-radius:6px;
+}
+
+/* TEXTOS HEADER */
+
 header h1 {
     margin: 0;
     font-size: 28px;
 }
+
 header h2 {
     margin: 5px 0 0 0;
     font-size: 16px;
     font-weight: normal;
 }
+
 header p {
     margin: 8px 0 0 0;
     font-size: 14px;
 }
+
 header a {
     color: #ffffff;
     text-decoration: underline;
     margin: 0 5px;
 }
+
+/* SECCIONES */
+
 section {
     background: #ffffff;
     padding: 15px 20px;
@@ -45,34 +90,39 @@ section {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     page-break-inside: avoid;
 }
+
 section h2 {
     border-bottom: 2px solid #0066cc;
     padding-bottom: 5px;
     color: #0066cc;
 }
+
 ul {
     margin: 5px 0 0 20px;
 }
+
+/* TABLAS */
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    page-break-inside: auto;
 }
+
 table th, table td {
     text-align: left;
     padding: 6px;
     font-size: 12px;
     vertical-align: top;
 }
+
 table th {
     background-color: #e6f0ff;
     color: #0066cc;
 }
-table tr {
-    page-break-inside: avoid;
-    break-inside: avoid;
-}
+
+/* BOTÓN PDF */
+
 .btn {
     padding: 10px 15px;
     background: #0066cc;
@@ -82,11 +132,14 @@ table tr {
     cursor: pointer;
     margin-bottom: 15px;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 </style>
 </head>
+
 <body>
 
 <button class="btn" id="downloadPdf">Descargar PDF</button>
@@ -94,19 +147,42 @@ a:hover {
 <div id="cvContent">
 
 <header>
+
+<div class="header-wrapper">
+
+<div class="header-spacer"></div>
+
+<div class="header-center">
+
 <h1>Daniel Olivares Contreras</h1>
 <h2>Senior Performance Engineer | QA | Banca | Cloud</h2>
-<p>
+
+<p class="contact-links">
 <a href="https://wa.me/56942788737">+56 9 427 88 737</a> |
 <a href="mailto:daniel.ignacio@gmail.com">daniel.ignacio@gmail.com</a> |
 <a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/">LinkedIn</a> |
 <a href="https://sh-daniel.github.io/cv_daniel_olivares/">cv_Cloud</a>
 </p>
+
+</div>
+
+<div class="qr-container">
+<canvas id="qr"></canvas>
+</div>
+
+</div>
+
 </header>
 
 <section>
 <h2>Perfil Profesional</h2>
-<p>Performance Engineer con más de 12 años de experiencia en sistemas críticos del sector financiero. Especializado en pruebas de carga y stress, análisis de performance en aplicaciones y bases de datos, optimización de queries y gestión de ambientes complejos multi‑entorno. Experiencia en plataformas de alta disponibilidad, diagnóstico de cuellos de botella, soporte a producción y colaboración con equipos Dev, QA y DevOps.</p>
+<p>
+Performance Engineer con más de 12 años de experiencia en sistemas críticos del sector financiero.
+Especializado en pruebas de carga y stress, análisis de performance en aplicaciones y bases de datos,
+optimización de queries y gestión de ambientes complejos multi-entorno.
+Experiencia en plataformas de alta disponibilidad, diagnóstico de cuellos de botella,
+soporte a producción y colaboración con equipos Dev, QA y DevOps.
+</p>
 </section>
 
 <section>
@@ -126,47 +202,66 @@ a:hover {
 
 <section>
 <h2>Experiencia Profesional</h2>
+
 <table border="1">
+
 <tr>
-<th>Empresa</th><th>Cliente/Proyecto</th><th>Período</th><th>Rol</th><th>Descripción / Herramientas</th>
+<th>Empresa</th>
+<th>Cliente/Proyecto</th>
+<th>Período</th>
+<th>Rol</th>
+<th>Descripción / Herramientas</th>
 </tr>
+
 <tr>
 <td>TCS</td>
 <td>Transbank</td>
 <td>Feb 2022 – Feb 2026</td>
 <td>Analyst.BFSIUS SE&Latam</td>
 <td>
-Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identificación de errores, análisis de resultados y soporte a releases.<br>
-<b>Herramientas:</b> Sql Developer, Datastage, Cawa, Postman, Kafka Tools, Jira, Confluence, Unix/Linux, Winscp, AWS, Snowflake, Rancher, Postgres, Dbeaver
+Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identificación de errores,
+análisis de resultados y soporte a releases.<br>
+<b>Herramientas:</b> Sql Developer, Datastage, Cawa, Postman, Kafka Tools, Jira,
+Confluence, Unix/Linux, Winscp, AWS, Snowflake, Rancher, Postgres, Dbeaver
 </td>
 </tr>
+
 <tr>
 <td>Connectis Global Services Chile S.A</td>
 <td>Banco Consorcio</td>
 <td>Ene 2022 – Feb 2022</td>
 <td>Analista QA</td>
-<td>Diseño, análisis y ejecución de casos de prueba complejos, flujos fríos, regresión y casos de borde.<br>
+<td>
+Diseño, análisis y ejecución de casos de prueba complejos, flujos fríos, regresión y casos de borde.<br>
 <b>Herramientas:</b> SQL Developer, SQL, Jira, Mantis, Testlink, Confluence, Oracle, SQL Server
 </td>
 </tr>
+
 <tr>
 <td>Inmetrics</td>
 <td>Banchile Inversiones / Banco Itaú</td>
 <td>Ene 2013 – Dic 2021</td>
 <td>Senior Performance Analyst</td>
-<td>Pruebas de carga y stress con JMeter, análisis de performance en aplicaciones backend y Oracle, gestión de ambientes QA, laboratorio y producción, soporte a incidentes críticos y gestión de middleware.<br>
-<b>Herramientas:</b> JMeter, Weblogic, Oracle Enterprise Manager 10g, middlewares, ASM, Postman, SoapUI
+<td>
+Pruebas de carga y stress con JMeter, análisis de performance en aplicaciones backend y Oracle,
+gestión de ambientes QA, laboratorio y producción, soporte a incidentes críticos.<br>
+<b>Herramientas:</b> JMeter, Weblogic, Oracle Enterprise Manager 10g, middlewares,
+ASM, Postman, SoapUI
 </td>
 </tr>
+
 <tr>
 <td>HP Chile</td>
 <td>Emel, Binaria, Transbank</td>
 <td>Abr 2009 – Ene 2013</td>
-<td><strong>Production Support / Systems Operator</strong></td>
-<td>Monitoreo de procesos batch, gestión de workload y respaldos, análisis de logs e incidentes.<br>
-<b>Herramientas:</b> Linux, HP-UX, Unix, Windows, Workload, Prognosys, SQL Plus, Query Builder, Data Protector
+<td>Production Support / Systems Operator</td>
+<td>
+Monitoreo de procesos batch, gestión de workload y respaldos, análisis de logs e incidentes.<br>
+<b>Herramientas:</b> Linux, HP-UX, Unix, Windows, Workload, Prognosys,
+SQL Plus, Query Builder, Data Protector
 </td>
 </tr>
+
 </table>
 </section>
 
@@ -176,7 +271,7 @@ Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identif
 <li>JMeter, Load testing, Stress testing</li>
 <li>Oracle, SQL, PL/SQL, Postgres</li>
 <li>REST / SOAP, Kafka, MQ, JMS</li>
-<li>Jenkins, Git, Bitbucket, Jira, Xray, Postman, Control‑M</li>
+<li>Jenkins, Git, Bitbucket, Jira, Xray, Postman, Control-M</li>
 <li>Linux, Unix, Middleware, Weblogic</li>
 <li>ETL, Datastage, ODI, Snowflake</li>
 <li>AWS, Google Cloud</li>
@@ -191,17 +286,33 @@ Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identif
 </div>
 
 <script>
-document.getElementById("downloadPdf").addEventListener("click", () => {
-    const element = document.getElementById("cvContent");
-    const opt = {
-        margin: 10,
-        filename: 'CV_Perfil_Profesional_Daniel_Olivares.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 1.8, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(element).save();
+
+/* GENERAR QR */
+
+const qr = new QRious({
+    element: document.getElementById("qr"),
+    value: "https://sh-daniel.github.io/cv_daniel_olivares/",
+    size: 110
 });
+
+/* EXPORTAR A PDF */
+
+document.getElementById("downloadPdf").addEventListener("click", () => {
+
+const element = document.getElementById("cvContent");
+
+const opt = {
+margin: 10,
+filename: 'CV_Perfil_Profesional_Daniel_Olivares.pdf',
+image: { type: 'jpeg', quality: 0.98 },
+html2canvas: { scale: 1.8, useCORS: true },
+jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+};
+
+html2pdf().set(opt).from(element).save();
+
+});
+
 </script>
 
 </body>
